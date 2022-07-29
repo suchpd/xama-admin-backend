@@ -1,14 +1,13 @@
-package com.xama.backend.application.service;
+package com.xama.backend.application.service.service;
 
 //import com.xama.backend.dao.repository.MiniProgramUserRepository;
 import com.xama.backend.dao.repository.MiniProgramUserRepository;
 import com.xama.backend.domain.dto.MiniProgramUserDto;
 import com.xama.backend.domain.entity.MiniProgramUser;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MiniProgramUserServiceImpl implements MiniProgramUserService{
+public class MiniProgramUserServiceImpl implements MiniProgramUserService {
 
     private final MiniProgramUserRepository miniProgramUserRepository;
 

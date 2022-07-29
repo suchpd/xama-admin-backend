@@ -50,11 +50,6 @@ public class MiniProgramUserDto {
     private String language;
 
     /**
-     * 锁定状态
-     */
-    private boolean lockStatus;
-
-    /**
      * 最后登录Ip
      */
     private String lastLoginIp;

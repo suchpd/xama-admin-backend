@@ -112,7 +112,6 @@ public class MiniProgramUser extends Entity {
         miniProgramUser.setGender(miniProgramUserDto.getGender());
         miniProgramUser.setLanguage(miniProgramUserDto.getLanguage());
         miniProgramUser.setCreateTime(new Date());
-        miniProgramUser.setLockStatus(miniProgramUserDto.isLockStatus());
         miniProgramUser.setLastLoginTime(new Date());
         miniProgramUser.setLastLoginIp(miniProgramUserDto.getLastLoginIp());
 

@@ -1,4 +1,4 @@
-package com.xama.backend.application.service;
+package com.xama.backend.application.service.service;
 
 import com.xama.backend.domain.dto.MiniProgramUserDto;
 import com.xama.backend.domain.entity.MiniProgramUser;

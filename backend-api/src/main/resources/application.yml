@@ -28,6 +28,9 @@ spring:
 
     #制定了数据库的类型
     database-platform: org.hibernate.dialect.MySQL8Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
 
 #端口号
 server:
