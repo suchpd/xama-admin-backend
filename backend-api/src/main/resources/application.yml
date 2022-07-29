@@ -1,0 +1,70 @@
+
+
+#数据库配置（连接云数据库）
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://1.15.172.245:3306/xama_infrastructure
+    username: ENC(HdIazwXUxgD7Zcnq84JR4g==)
+    password: ENC(Qnwn+aU5QHJx6KSpfAeCQg==)
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+    #create:每次运行程序都会将原来的表删除，然后创建一个表
+    #create-drop:每次创建一个数据表，数据表使用完毕后，将数据表删除
+    #update:如果实体类发生改变，数据表会更新，如果数据库存在表就会使用原来的表，如果不存在则新增
+    #validate:实体类和数据库比较，如果属性或个数不一致，则抛异常
+
+    #操作实体对象时，会生成Sql语句，false 不生成
+    show-sql: true
+
+    #制定了数据库的类型
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+#端口号
+server:
+  port: 8090
+
+#mybatis
+mybatis:
+  mapper-locations: com/hy/mapper/*.xml
+
+#mybatis分页
+pagehelper:
+  helper-dialect: mysql
+
+#Tencent COS对象存储
+cos:
+  baseUrl: https://xama-admin-1300682403.cos.ap-shanghai.myqcloud.com
+  accessKey: AKIDOr55qLbbMs89uQhiY8TYOzLVQ6WhcIit
+  secretKey: yg9MK2VigOr41jBOL2UgdKlxta1D9pGR
+  regionName: ap-shanghai
+  bucketName: xama-admin-1300682403
+  folderPrefix: /uploadFiles
+
+#日志配置 无特殊需求无需更改
+logging:
+  config:  classpath:log4j2.xml
+  level:
+    root: INFO
+    javax.activation: info
+    org.apache.catalina: INFO
+    org.apache.commons.beanutils.converters: INFO
+    org.apache.coyote.http11.Http11Processor: INFO
+    org.apache.http: INFO
+    org.apache.tomcat: INFO
+    org.springframework: INFO
+    com.chinamobile.cmss.bdpaas.resource.monitor: DEBUG
+
+#配置数据源加密的密钥
+jasypt:
+  encryptor:
+    password: hellospringboot
